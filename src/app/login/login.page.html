@@ -1,0 +1,81 @@
+<ion-content>
+
+  <!-- Segment with default selection -->
+  <ion-segment (ionChange)="segmentChanged($event)" [value]="ionSegment()" mode="md">
+    <ion-segment-button color="light" value="entrar">
+      <ion-label color="light">Entrar</ion-label>
+    </ion-segment-button>
+    <ion-segment-button color="light" value="registrar">
+      <ion-label color="light">Registrar</ion-label>
+      asasssssssssssssssssssssssssssssssssssssssssssssssssssss
+      
+    </ion-segment-button>
+    
+  </ion-segment>
+
+  
+<ion-toolbar class="cabecalho">
+  <img class="empresa" src="../../assets/e-transparente.png" alt="logo-do-site">
+  <h2 class="logo">Easy</h2>
+  <h2 class="logo2">Administration</h2>
+</ion-toolbar> 
+
+  <!-- cancelar iondrag manual -->
+  <ion-slides class="bg" [options]="{allowTouchMove: false}">
+      
+
+    <ion-slide name="login">
+      <ion-card class="login-card">
+          
+        <form [formGroup]="formEntrada" (submit)="login()">
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email" formControlName="email" name="email" autocomplete="on">
+            </ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Senha</ion-label>
+            <ion-input clear-on-edit="false" [type]="tipoSenha()" formControlName="senha" name="senha"
+              autocomplete="on">
+            </ion-input>
+            <ion-button slot="end" shape="round" color="dark" (click)="toggleSenha()" fill="clear">
+              <ion-icon slot="icon-only" [name]="iconeSenha()"></ion-icon>
+            </ion-button>
+          </ion-item>
+          <a (click)="recuperarSenha()">Esqueci minha senha</a>
+
+          <ion-button class="b" [disabled]="!formEntrada.valid" type="submit" color="primary" expand="full">Entrar
+          </ion-button>
+        </form>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide name="register">
+      <ion-card>
+        <form [formGroup]="formEntrada" (ngSubmit)="register()">
+          <ion-item>
+            <ion-label position="floating">Nome</ion-label>
+            <ion-input type="text" formControlName="nome" name="nome" autocomplete="on"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email" formControlName="email" name="email" autocomplete="on">
+            </ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Senha</ion-label>
+            <ion-input clear-on-edit="false" [type]="tipoSenha()" formControlName="senha" name="senha"
+              autocomplete="on">
+            </ion-input>
+            <ion-button slot="end" shape="round" color="dark" (click)="toggleSenha()" fill="clear">
+              <ion-icon slot="icon-only" [name]="iconeSenha()"></ion-icon>
+            </ion-button>
+          </ion-item>
+          <ion-button class="b" [disabled]="!formEntrada.valid" type="submit" color="primary" expand="full">Cadastrar
+          </ion-button>
+        </form>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>

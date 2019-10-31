@@ -1,0 +1,86 @@
+ion-content {
+    --margin: 0px;
+    --padding: 0px;
+    --background: url('../../assets/bg.jpg');
+    --webkit-background-size:cover;
+    text-align: center
+}
+
+form{
+    background: white;
+}
+
+.b{
+    background: blue;
+    color: white;
+}
+
+.butao{
+    padding-top:50px;
+height: 5px;
+justify-content: center;
+text-align: center;
+
+border-radius: 5px;
+left: 20px;
+    
+} 
+.bg{
+    
+    padding-top:50px;
+    height: 370px;
+    justify-content: center;
+   
+    
+    border-radius: 5px;
+
+    right: 2px;
+    
+}
+.login-card{
+    --align-content: center;
+    display: flex;
+    --flex-direction: column;
+    --justify-content: center;
+    --text-align: center;
+    --top:80px ;
+}
+ion-content {
+    --margin: 0px;
+    --padding: 0px;
+    
+
+    text-align: center
+}
+.buton{
+    border-radius: 5px;
+}
+.logo2{
+    position: absolute;
+    left: 5px;
+    width: 250px;
+    height: 150px;
+    --float: right;
+    margin-top:30px;
+    
+    
+
+}
+.logo{
+    position: absolute;
+    left: 30px;
+    width: 100px;
+    height: 50px;
+    --float: right;
+--background-color: black;
+margin-top: auto;
+  
+}
+.empresa{
+    float: left;
+    top: 150px;
+    ;
+}
+.cabecalho{
+    --background:rgb(40, 143, 240);
+}
